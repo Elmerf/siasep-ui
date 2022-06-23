@@ -10,12 +10,13 @@ import "@/plugins/dayjs";
 import VueCookies from "vue-cookies";
 
 Vue.use(VueCookies);
+Vue.$cookies.config("7d", "", "", true, "none");
 
 Vue.config.productionTip = false;
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL: "http://localhost:3000",
+  baseURL: "https://siasep-be.herokuapp.com",
 });
 
 Vue.use(VueAxios, instance);
