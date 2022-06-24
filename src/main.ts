@@ -16,8 +16,10 @@ Vue.config.productionTip = false;
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL: "https://siasep-be.herokuapp.com",
+  baseURL: "https://api.siasep.my.id",
 });
+
+console.log(instance.defaults);
 
 Vue.use(VueAxios, instance);
 
