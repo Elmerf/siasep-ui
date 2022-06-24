@@ -10,7 +10,7 @@ import "@/plugins/dayjs";
 import VueCookies from "vue-cookies";
 
 Vue.use(VueCookies);
-Vue.$cookies.config("7d", "siasep.my.id", "", true);
+Vue.$cookies.config("7d", "", "siasep.my.id", true);
 
 Vue.config.productionTip = false;
 
