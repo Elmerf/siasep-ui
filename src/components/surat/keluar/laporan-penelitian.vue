@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <!-- TODO: otomatis -->
         <v-select
           label="Jenis Penelitan"
@@ -12,7 +12,7 @@
           :disabled="show"
         ></v-select>
       </v-col>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><date-picker
           label="Tanggal Penelitian"
           v-model="surat.tanggal_surat"
@@ -20,7 +20,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-text-field
           label="Nama WP"
           dense
@@ -28,7 +28,7 @@
           :rules="rules"
         ></v-text-field>
       </v-col>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-text-field
           label="NPWP"
           dense
@@ -38,7 +38,7 @@
       ></v-col>
     </v-row>
     <v-row>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-text-field
           label="Perihal"
           dense
@@ -47,7 +47,7 @@
         ></v-text-field
       ></v-col>
       <!-- TODO: Autocomplete -->
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-select
           label="Nama AR"
           dense
@@ -59,7 +59,7 @@
       ></v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-textarea
           label="Keterangan"
           dense
@@ -68,7 +68,7 @@
           v-model="surat.keterangan"
         ></v-textarea>
       </v-col>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-file-input
           accept="application/pdf"
           v-model="surat.file_surat"

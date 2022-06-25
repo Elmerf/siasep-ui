@@ -1,13 +1,13 @@
 <template>
   <div>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <date-picker
           label="Tanggal Terima"
           v-model="surat.tanggal_terima"
         ></date-picker>
       </v-col>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-text-field
           label="ID Nadine"
           counter="9"
@@ -18,13 +18,13 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <date-picker
           label="Tanggal Surat"
           v-model="surat.tanggal_surat"
         ></date-picker>
       </v-col>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-text-field
           label="Nomor Surat"
           dense
@@ -34,7 +34,7 @@
       ></v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-text-field
           label="Nama Pengirim"
           dense
@@ -42,7 +42,7 @@
           :rules="rules"
         ></v-text-field>
       </v-col>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-text-field
           label="Perihal"
           dense
@@ -52,14 +52,14 @@
       ></v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-text-field
           label="Nama WP"
           dense
           v-model="surat.nama_wp"
         ></v-text-field>
       </v-col>
-      <v-col md="6"
+      <v-col cols="12" md="6"
         ><v-select
           label="Disposisi"
           dense
@@ -71,7 +71,7 @@
       ></v-col>
     </v-row>
     <v-row>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-textarea
           label="Keterangan"
           dense
@@ -80,7 +80,7 @@
           v-model="surat.keterangan"
         ></v-textarea>
       </v-col>
-      <v-col md="6">
+      <v-col cols="12" md="6">
         <v-file-input
           accept="application/pdf"
           v-model="surat.file_surat"
@@ -100,7 +100,7 @@ type Rules = (value: string) => boolean | string;
 
 import Vue from "vue";
 import { checkExtensions } from "@/utils/allowedExtensions";
-import { mapActions, mapState } from "vuex";
+import { mapState } from "vuex";
 export default Vue.extend({
   components: { DatePicker },
   data() {

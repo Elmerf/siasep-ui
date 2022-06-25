@@ -19,7 +19,20 @@ const instance = axios.create({
   baseURL: "https://api.siasep.my.id",
 });
 
-console.log(instance.defaults);
+instance.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    if (error.response.status === 401) {
+      Vue.$cookies.remove("username");
+      Vue.$cookies.remove("session_id");
+      Vue.$cookies.remove("isAdmin");
+      router.go(0);
+    }
+    return error;
+  }
+);
 
 Vue.use(VueAxios, instance);
 
