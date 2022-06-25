@@ -16,7 +16,7 @@ Vue.config.productionTip = false;
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL: "https://api.siasep.my.id",
+  baseURL: process.env.BACKEND_URL,
 });
 
 console.log(instance.defaults);

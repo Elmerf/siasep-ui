@@ -13,7 +13,7 @@
           elevation="8"
         >
           <v-card-title class="justify-center font-weight-medium"
-            >SURAT {{ item.tipe.tipe_surat.toUpperCase() }}</v-card-title
+            >SURAT {{ item.tipe_surat.toUpperCase() }}</v-card-title
           >
           <v-card-text class="text-center text-h3">{{
             item.jumlah_surat
