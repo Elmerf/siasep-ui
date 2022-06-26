@@ -46,5 +46,8 @@ export default Vue.extend({
     ...mapState("snackbar", ["msg", "color"]),
   },
   methods: mapMutations("snackbar", ["hideSnackbar", "showSnackbar"]),
+  created() {
+    this.axios.get("/");
+  },
 });
 </script>

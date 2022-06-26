@@ -73,6 +73,9 @@ export default new Vuex.Store({
     unsetIsLoading(state) {
       state.isLoading = false;
     },
+    clearItems(state) {
+      state.items = [];
+    },
   },
   actions: {
     getItems({ commit, state }, keyword) {

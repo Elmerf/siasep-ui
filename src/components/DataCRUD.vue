@@ -106,6 +106,7 @@ export default Vue.extend({
       this.getItems(this.searchQuery);
     }, 1000),
     async __created() {
+      this.clearItems();
       this.setIsLoading();
       if (this.$route.query.page)
         this.page = parseInt(this.$route.query.page as string);
@@ -116,7 +117,7 @@ export default Vue.extend({
       }
     },
     formatDate,
-    ...mapMutations(["setIsLoading"]),
+    ...mapMutations(["setIsLoading", "clearItems"]),
     ...mapMutations("snackbar", ["showSnackbar"]),
     ...mapActions("detail", ["setKeys"]),
     ...mapActions(["getItems", "openForm", "openExcelExport"]),
