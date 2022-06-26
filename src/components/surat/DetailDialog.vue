@@ -4,7 +4,7 @@
       <v-card-title>Detail Surat</v-card-title>
       <v-card-text>
         <v-row>
-          <v-col cols="7">
+          <v-col cols="12" md="7">
             <iframe
               v-if="previewURL"
               style="position: relative; min-height: 400px; width: 100%"
@@ -14,7 +14,7 @@
             ></iframe>
             <span v-else>Belum mengunggah file</span>
           </v-col>
-          <v-col cols="5">
+          <v-col cols="12" md="5">
             <span class="text-body-1 font-weight-medium">{{
               surat.nomor_surat
             }}</span

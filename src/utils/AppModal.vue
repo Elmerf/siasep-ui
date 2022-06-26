@@ -1,5 +1,9 @@
 <template>
-  <v-dialog v-model="modal" :max-width="width" persistent>
+  <v-dialog
+    v-model="modal"
+    :max-width="$vuetify.breakpoint.mdAndUp ? width : '90%'"
+    persistent
+  >
     <slot></slot>
   </v-dialog>
 </template>

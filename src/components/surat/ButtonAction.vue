@@ -1,13 +1,14 @@
 <template>
   <v-row no-gutters justify="end">
-    <v-col md="3" class="mx-2">
+    <v-col cols="5" md="3" :class="$vuetify.breakpoint.mdAndUp ? 'mx-2' : ''">
       <app-button
         color="secondary lighten-2"
         text="close"
         @clicked="closeForm"
       ></app-button>
     </v-col>
-    <v-col md="3" class="mx-2">
+    <v-spacer v-if="$vuetify.breakpoint.smAndDown"></v-spacer>
+    <v-col cols="5" md="3" :class="$vuetify.breakpoint.mdAndUp ? 'mx-2' : ''">
       <app-button
         color="primary"
         text="submit"

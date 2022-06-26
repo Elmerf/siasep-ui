@@ -1,6 +1,6 @@
 <template>
   <v-row class="mt-2">
-    <v-col md="3">
+    <v-col cols="12" md="3">
       <v-text-field
         color="rgba(0, 0, 0, 0.87)"
         prepend-inner-icon="mdi-file-search-outline"
@@ -27,7 +27,7 @@
         @clicked="openExcelExport"
       ></app-button>
     </v-col>
-    <v-col md="9">
+    <v-col cols="12" md="9">
       <v-progress-circular
         indeterminate
         color="primary"

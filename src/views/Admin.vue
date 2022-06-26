@@ -122,7 +122,10 @@
         </v-card-text>
         <v-card-actions>
           <v-row no-gutters justify="end">
-            <v-col cols="6" md="3" class="mx-2"
+            <v-col
+              cols="5"
+              md="3"
+              :class="$vuetify.breakpoint.mdAndUp ? 'mx-2' : ''"
               ><app-button
                 text="close"
                 color="error lighten-2"
@@ -132,7 +135,11 @@
                 "
               ></app-button
             ></v-col>
-            <v-col cols="6" md="3" class="mx-2"
+            <v-spacer v-if="$vuetify.breakpoint.smAndDown"></v-spacer>
+            <v-col
+              cols="5"
+              md="3"
+              :class="$vuetify.breakpoint.mdAndUp ? 'mx-2' : ''"
               ><app-button
                 text="Tambah"
                 color="primary"
