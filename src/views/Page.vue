@@ -104,7 +104,7 @@ export default Vue.extend({
     ...mapActions(["closeExcelExport"]),
     exportToExcel(year) {
       const path = this.$route.fullPath;
-      window.open(`http://localhost:3000${path}/excel?year=${year}`);
+      window.open(`https://api.siasep.my.id${path}/excel?year=${year}`);
       this.$store.dispatch("closeExcelExport");
     },
   },
