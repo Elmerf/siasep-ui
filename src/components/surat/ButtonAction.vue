@@ -20,6 +20,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 const AppButton = () => import("@/utils/AppButton.vue");
 
 import Vue from "vue";

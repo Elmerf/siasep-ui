@@ -31,6 +31,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import AppButton from "@/utils/AppButton.vue";
 import AppModal from "@/utils/AppModal.vue";
 import Vue from "vue";

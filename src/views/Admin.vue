@@ -208,6 +208,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import AppModal from "@/utils/AppModal.vue";
 import AppButton from "@/utils/AppButton.vue";
 import Vue from "vue";

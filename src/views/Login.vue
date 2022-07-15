@@ -50,6 +50,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Vue from "vue";
 import { mapMutations } from "vuex";
 export default Vue.extend({

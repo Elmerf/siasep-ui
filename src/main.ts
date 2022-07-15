@@ -10,13 +10,13 @@ import "@/plugins/dayjs";
 import VueCookies from "vue-cookies";
 
 Vue.use(VueCookies);
-Vue.$cookies.config("7d", "", "siasep.my.id", true);
+Vue.$cookies.config("7d", "", "", false);
 
 Vue.config.productionTip = false;
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL: "https://api.siasep.my.id",
+  baseURL: "http://localhost:3000",
 });
 
 instance.interceptors.response.use(
@@ -28,7 +28,7 @@ instance.interceptors.response.use(
       Vue.$cookies.remove("username");
       Vue.$cookies.remove("session_id");
       Vue.$cookies.remove("isAdmin");
-      router.go(0);
+      // router.go(0);
     }
     return error;
   }

@@ -67,7 +67,7 @@ export default Vue.extend({
       const [year, month, day] = date.split("-");
       return `${day}/${month}/${year}`;
     },
-    handleInput(val) {;
+    handleInput(val) {
       this.$emit("input", val);
       this.menu = false;
     },

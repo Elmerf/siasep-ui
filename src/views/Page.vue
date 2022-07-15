@@ -47,6 +47,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Vue from "vue";
 import { capitalizeEveryFirstLetter } from "@/utils/capitalizeEveryFirstLetter";
 import { mapActions, mapState } from "vuex";

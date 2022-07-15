@@ -75,6 +75,8 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Vue from "vue";
 import AppButton from "@/utils/AppButton.vue";
 import { mapActions, mapMutations, mapState } from "vuex";
