@@ -249,16 +249,13 @@ export default Vue.extend({
       ).data as Stat[];
 
       for (let i = 0; i < this.graphStats.length; i++) {
-        this.jumlah_masuk[
-          this.graphStats[i].day
-            ? this?.graphStats[i]?.day - 1
-            : this?.graphStats[i]?.month - 1
-        ] = parseInt(this.graphStats[i].surat_masuk);
-        this.jumlah_keluar[
-          this.graphStats[i].day
-            ? this?.graphStats[i]?.day - 1
-            : this?.graphStats[i]?.month - 1
-        ] = parseInt(this.graphStats[i].surat_keluar);
+        const index =
+          this.graphStats[i].day != undefined
+            ? this.graphStats[i]?.day - 1
+            : this.graphStats[i]?.month - 1;
+
+        this.jumlah_masuk[index] = parseInt(this.graphStats[i].surat_masuk);
+        this.jumlah_keluar[index] = parseInt(this.graphStats[i].surat_keluar);
       }
     },
   },
